@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
     <title>APEX Institute OF Education | Best Classes in Bibile</title>
-    
-    <meta name="theme-color" id="theme-color-meta" content="#fffbeb">
     
     <meta name="description" content="Looking for the best tuition classes in Bibile? APEX Institute offers expert-led classes for Grades 1-11 with smart-board technology. Join our 2026 batches today!">
     <meta name="keywords" content="classes in Bibile, APEX Institute, Bibile education, scholarship classes, O/L classes Bibile, tuition center Bibile, best teachers Bibile">
@@ -23,13 +21,12 @@
     <meta property="twitter:description" content="APEX Institute is the #1 education center in Bibile. Expert-led classes for Grades 1-11.">
     <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AP1GczMGt0OCqJ-Rpg2PfsG22l3cthKeTfVixN3Jp7tNPymm479GPCdRGmcFq-1dadZydryK5CGANYixnOPi_DnAM2OmqV6YNN1QjxCoNxCBy0nIObZVDQ0-JwLnq6qPutYwbABZcZTTVjma96lAeD8Iaagc=w1200-h630-s-no-gm">
     
-    <meta property="whatapp:card" content="summary_large_image">
-    <meta property="whatapp:url" content="https://apexeducation.42web.io/">
-    <meta property="whatapp:title" content="APEX Institute OF Education">
-    <meta property="whatapp:description" content="APEX Institute is the #1 education center in Bibile. Expert-led classes for Grades 1-11.">
-    <meta property="whatapp:image" content="https://lh3.googleusercontent.com/pw/AP1GczMGt0OCqJ-Rpg2PfsG22l3cthKeTfVixN3Jp7tNPymm479GPCdRGmcFq-1dadZydryK5CGANYixnOPi_DnAM2OmqV6YNN1QjxCoNxCBy0nIObZVDQ0-JwLnq6qPutYwbABZcZTTVjma96lAeD8Iaagc=w1200-h630-s-no-gm">
+    <meta property="whatsapp:card" content="summary_large_image">
+    <meta property="whatsapp:url" content="https://apexeducation.42web.io/">
+    <meta property="whatsapp:title" content="APEX Institute OF Education">
+    <meta property="whatsapp:description" content="APEX Institute is the #1 education center in Bibile. Expert-led classes for Grades 1-11.">
+    <meta property="whatsapp:image" content="https://lh3.googleusercontent.com/pw/AP1GczMGt0OCqJ-Rpg2PfsG22l3cthKeTfVixN3Jp7tNPymm479GPCdRGmcFq-1dadZydryK5CGANYixnOPi_DnAM2OmqV6YNN1QjxCoNxCBy0nIObZVDQ0-JwLnq6qPutYwbABZcZTTVjma96lAeD8Iaagc=w1200-h630-s-no-gm">
     
-
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -102,11 +99,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             background-color: var(--bg-color);
-            backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
             z-index: 99999;
             display: flex;
             justify-content: center;
@@ -162,6 +159,38 @@
             transform: translateY(0);
         }
 
+        .hero-tag {
+            color: var(--orange);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--slate);
+        }
+
+        .testimonial-stars {
+            color: var(--orange);
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+        }
+
+        .section-title,
+        .map-section h2,
+        .section-heading,
+        .popular-classes-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .popular-classes-title {
+            margin: 0;
+        }
+
         .no-scroll {
             overflow: hidden !important;
             touch-action: none !important;
@@ -169,7 +198,7 @@
 
         * { 
             margin: 0; padding: 0; box-sizing: border-box; 
-            font-family: 'Plus Jakarta Sans', Sf pro display, -apple-system, BlinkMacSystemFont, sans-serif; 
+            font-family: 'Plus Jakarta Sans', "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; 
             text-decoration: none !important; 
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -191,19 +220,20 @@
             transition: background-color 0.6s ease, color 0.6s ease; 
         }
 
-        /* Creates a perfectly un-glitched fixed full-screen background for mobile & desktop */
+        /* Perfectly un-glitched fixed full-screen background for mobile & desktop */
         body::before {
             content: "";
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             z-index: -1;
             background-color: var(--bg-color);
-            background-image: var(--bg-grad), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'); 
-            background-size: fill;
-            background-position: center;
+            background-image: var(--bg-grad), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2564&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
             background-blend-mode: soft-light;
             transition: background-color 0.6s ease;
         }
@@ -214,16 +244,16 @@
 
         .top-blur-strip {
             position: fixed; top: 0; left: 0; width: 100%; height: 100px;
-            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);
             z-index: 999; pointer-events: none; opacity: 0; transition: opacity 0.6s ease;
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
         }
         body.scrolled .top-blur-strip { opacity: 1; }
 
         nav.navbar {
             background: var(--nav-bg); 
-            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
             padding: 12px 30px; display: flex; justify-content: space-between; align-items: center;
             box-shadow: var(--shadow-glass); position: sticky; top: 20px; z-index: 1000;
             border: 1px solid var(--nav-border); transition: var(--transition);
@@ -293,7 +323,7 @@
         .hero-images { flex: 1; display: flex; justify-content: center; }
         .img-feature { width: 100%; max-width: 550px; border-radius: 40px; overflow: hidden; border: 8px solid var(--white); box-shadow: var(--shadow-md); transition: var(--transition); }
         .img-feature:hover { transform: scale(1.02) rotate(1deg); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+        img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 
         .classes-section, .instructors-section, .faq-section, .testimonials-section, .inquiry-section { padding: 60px 10%; }
         .section-header { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 40px; }
@@ -301,7 +331,7 @@
         .all-classes-btn:hover { transform: scale(1.08); box-shadow: var(--shadow-md); }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { background: var(--card-bg); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid var(--nav-border); overflow: hidden; transition: var(--transition); }
+        .card { background: var(--card-bg); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid var(--nav-border); overflow: hidden; transition: var(--transition); }
         
         .card-img-container { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: rgba(0,0,0,0.05); }
         .card-img-container img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s; }
@@ -323,12 +353,12 @@
         .student-avatar { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--orange); object-fit: cover; }
 
         /* Inquiry Form */
-        .glass-form { background: var(--card-bg); backdrop-filter: blur(15px); padding: 40px; border-radius: 24px; border: 1px solid var(--nav-border); box-shadow: var(--shadow-glass); display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto; }
+        .glass-form { background: var(--card-bg); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); padding: 40px; border-radius: 24px; border: 1px solid var(--nav-border); box-shadow: var(--shadow-glass); display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto; }
         .glass-input { width: 100%; padding: 15px 20px; border-radius: 12px; border: 1px solid var(--border-light); background: var(--nav-bg); color: var(--dark); outline: none; transition: var(--transition); font-size: 1rem; }
         .glass-input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,149,0,0.1); }
 
         /* FAQ Styling */
-        .faq-item { background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 15px; padding: 20px; border: 1px solid var(--nav-border); cursor: pointer; transition: var(--transition); }
+        .faq-item { background: var(--card-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 15px; padding: 20px; border: 1px solid var(--nav-border); cursor: pointer; transition: var(--transition); }
         .faq-item:hover { border-color: var(--orange); }
         .faq-item h3 { font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; color: var(--dark); }
         .faq-item .fas.fa-plus { transition: transform 0.3s ease; color: var(--slate); }
@@ -340,8 +370,9 @@
         .map-section { padding: 60px 10%; display: flex; flex-direction: column; align-items: center; gap: 30px; }
         .map-container { width: 100%; height: 450px; border-radius: 32px; overflow: hidden; border: 8px solid var(--white); box-shadow: var(--shadow-md); transition: var(--transition); background: var(--card-bg); }
         .map-container:hover { transform: scale(1.01); box-shadow: var(--shadow-glass); }
+        .map-container iframe { display: block; width: 100%; height: 100%; border: 0; }
 
-        .search-container input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid var(--nav-border); background: var(--card-bg); color: var(--dark); outline: none; box-shadow: var(--shadow-sm); font-size: 1rem; transition: var(--transition); backdrop-filter: blur(10px); }
+        .search-container input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid var(--nav-border); background: var(--card-bg); color: var(--dark); outline: none; box-shadow: var(--shadow-sm); font-size: 1rem; transition: var(--transition); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
         .search-container input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,149,0,0.1); }
 
         #all-classes-page, #instructors-page { display: none; padding: 60px 10% 100px; min-height: 80vh; position: relative; }
@@ -351,10 +382,11 @@
         .coming-soon-content h2 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
         .coming-soon-content p { font-size: 1.2rem; color: var(--slate); font-weight: 600; }
 
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28, 28, 30, 0.7); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 3000; opacity: 0; transition: opacity 0.6s ease; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28, 28, 30, 0.7); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 3000; opacity: 0; transition: opacity 0.6s ease; }
         .modal-overlay.show { opacity: 1; }
         .modal-box { background: var(--modal-bg); width: 90%; max-width: 450px; border-radius: 32px; padding: 40px; position: relative; transform: scale(0.85); transition: transform 0.6s cubic-bezier(0.25, 1, 0.35, 1); border: 1px solid var(--nav-border); }
         .modal-overlay.show .modal-box { transform: scale(1); }
+        .modal-heading { color: var(--orange); margin-bottom: 20px; }
         .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; z-index: 10; color: var(--slate); transition: var(--transition); }
         .close-modal:hover { transform: rotate(90deg) scale(1.2); color: var(--orange); }
 
@@ -417,16 +449,47 @@
         }
     </script>
 
+    <style>
+        .course-info-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .course-info-row--compact {
+            border-bottom: none;
+        }
+
+        .course-info-icon {
+            color: var(--slate);
+        }
+
+        .course-info-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--slate);
+        }
+
+        .course-info-value {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+    </style>
+
     <div class="top-blur-strip"></div>
 
     <div class="modal-overlay" id="courseModal">
         <div class="modal-box">
             <span class="close-modal" onclick="closePopup('courseModal')" aria-label="Close Modal">×</span>
-            <h2 id="popTitle" style="color: var(--orange); margin-bottom: 20px;">Course Details</h2>
-            <div class="info-row"><i class="fas fa-book-open" style="color: var(--slate)"></i><div><span style="font-size: 0.7rem; font-weight: 700; color: var(--slate);" data-en="SYLLABUS">SYLLABUS</span><p id="popDesc" style="font-weight: 700; font-size: 0.9rem;"></p></div></div>
-            <div class="info-row"><i class="fas fa-user-tie" style="color: var(--slate)"></i><div><span style="font-size: 0.7rem; font-weight: 700; color: var(--slate);" data-en="INSTRUCTOR">INSTRUCTOR</span><p id="popTeacher" style="font-weight: 700;"></p></div></div>
-            <div class="info-row"><i class="fas fa-clock" style="color: var(--slate)"></i><div><span style="font-size: 0.7rem; font-weight: 700; color: var(--slate);" data-en="TIME & DATE">TIME & DATE</span><p id="popTime" style="font-weight: 700;"></p></div></div>
-            <div class="info-row" style="border:none"><i class="fas fa-tag" style="color: var(--slate)"></i><div><span style="font-size: 0.7rem; font-weight: 700; color: var(--slate);" data-en="MONTHLY FEE">MONTHLY FEE</span><p id="popPrice" style="font-weight: 700;"></p></div></div>
+            <h2 id="popTitle" class="modal-heading">Course Details</h2>
+            <div class="course-info-row"><i class="fas fa-book-open course-info-icon"></i><div><span class="course-info-label" data-en="SYLLABUS">SYLLABUS</span><p id="popDesc" class="course-info-value"></p></div></div>
+            <div class="course-info-row"><i class="fas fa-user-tie course-info-icon"></i><div><span class="course-info-label" data-en="INSTRUCTOR">INSTRUCTOR</span><p id="popTeacher" class="course-info-value"></p></div></div>
+            <div class="course-info-row"><i class="fas fa-clock course-info-icon"></i><div><span class="course-info-label" data-en="TIME & DATE">TIME & DATE</span><p id="popTime" class="course-info-value"></p></div></div>
+            <div class="course-info-row course-info-row--compact"><i class="fas fa-tag course-info-icon"></i><div><span class="course-info-label" data-en="MONTHLY FEE">MONTHLY FEE</span><p id="popPrice" class="course-info-value"></p></div></div>
             
             <button class="modal-whatsapp-btn" onclick="contactViaWhatsApp()">
                 <i class="fab fa-whatsapp"></i> <span data-en="Chat for More Info">Chat for More Info</span>
@@ -438,9 +501,9 @@
     <div class="modal-overlay" id="noticeModal">
         <div class="modal-box">
             <span class="close-modal" onclick="closePopup('noticeModal')" aria-label="Close Modal">×</span>
-            <h2 style="color: var(--orange); margin-bottom: 20px;" data-en="Special Notice">Special Notice</h2>
-            <div style="padding: 15px; background: rgba(255, 149, 0, 0.1); border-left: 4px solid var(--orange); border-radius: 8px; margin-bottom: 20px;">
-                <p style="color: var(--slate); font-weight: 600;" data-en="New 2026 batches are starting next month! Register now to secure your spot.">New 2026 batches are starting next month! Register now to secure your spot.</p>
+            <h2 class="notice-heading" data-en="Special Notice">Special Notice</h2>
+            <div class="notice-message">
+                <p class="notice-message-text" data-en="New 2026 batches are starting next month! Register now to secure your spot.">New 2026 batches are starting next month! Register now to secure your spot.</p>
             </div>
             <button class="confirm-btn" onclick="closePopup('noticeModal')" data-en="Close">Close</button>
         </div>
@@ -482,9 +545,9 @@
     <div id="home-page">
         <section class="hero reveal">
             <div class="hero-content">
-                <span style="color: var(--orange); font-weight: 800; text-transform: uppercase; font-size: 1.2rem; letter-spacing: 2px;" data-en="The #1 modern education center in Bibile">The #1 modern education center in Bibile</span>
+                <span class="hero-eyebrow" data-en="The #1 modern education center in Bibile">The #1 modern education center in Bibile</span>
                 <h1>APEX<span> INSTITUTE </span>OF EDUCATION.</h1>
-                <p><span style="font-size: 1.1rem; color: var(--slate);" data-en="We offer expert-led classes for Grades 1-11 using modern technology">We offer expert-led classes for Grades 1-11 using modern technology</span></p>
+                <p><span class="hero-description" data-en="We offer expert-led classes for Grades 1-11 using modern technology">We offer expert-led classes for Grades 1-11 using modern technology</span></p>
                 
                 <div class="hero-actions">
                     <button class="all-classes-btn" onclick="showPage('all-classes')"><span data-en="View All Classes">View All Classes</span> <i class="fas fa-arrow-right"></i></button>
@@ -545,7 +608,7 @@
             <form action="https://formspree.io/f/mlgvdpad" method="POST" class="glass-form">
                 <input type="text" name="name" class="glass-input" placeholder="Student Name" required aria-label="Student Name">
                 <input type="tel" name="phone" class="glass-input" placeholder="WhatsApp Number" required aria-label="WhatsApp Number">
-                <input type="text" name="note" class="glass-input" placeholder="note (Optional)" aria-label="Note">
+                <input type="text" name="note" class="glass-input" placeholder="Note (Optional)" aria-label="Note">
                 <select name="grade" class="glass-input" required aria-label="Select Grade">
                     <option value="" disabled selected>Select Grade</option>
                     <option value="1-5">Grades 1-5</option>
@@ -582,11 +645,11 @@
         </section>
 
         <section class="map-section reveal">
-            <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center;" data-en="Find Us in Bibile">Find Us in Bibile</h2>
+            <h2 data-en="Find Us in Bibile">Find Us in Bibile</h2>
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.364491790449!2d81.20803607498703!3d7.134777792868953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDgnMDUuMiJOIDgxwrAxMiczOC4yIkU!5e0!3m2!1sen!2slk!4v1710086400000!5m2!1sen!2slk" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="APEX Institute Location Map">
+                    width="100%" height="100%" allowfullscreen loading="lazy" title="APEX Institute Location Map">
                 </iframe>
             </div>
         </section>
@@ -645,7 +708,7 @@
             }
         });
 
-        // Updated data array with syllabus descriptions (desc)
+        // Updated data array with spelling errors fixed
         const classes = [
             { t: 'Grade 09 - Sinhala', p: '1,000', d: 'Friday 5:00 PM', i: 'Herath Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczMthingTV0O0lX1Onb1WgP9temctk7d7YkyIT1g3Ha1z-aojT8eGS4fj9X_OAvTDHdYgEDqMr5e2VOl3Wifb2JoptvN6_SvNwJZFmoS2VBW8BJ7TLMwUlnhbVgrKxsmD2kMpYxCJq6mauy3PGIDwlQQ=w1254-h913-s-no-gm', desc: 'Full coverage of grammar, literature, and essay writing.' },
             { t: 'Grade 10 - History', p: '1,000', d: 'Tuesday 5:00 PM', i: 'Nuwan C Konara Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczMo3ATUIA6ylNGroXta4-FeKgftUr_2NZiZg6E3XUwWBz2BedEkIH3WmM4pLjZE-l9BxR0LLHulrSLoQqxFnIJZDxSmmdPLkzKi3OqlSGnbMJVqPpcA-CNsoMMsL_pszb2nk0dUseiIk0q-_uMGiooq=w1254-h913-s-no-gm', desc: 'In-depth review of Sri Lankan and World History.' },
@@ -661,15 +724,15 @@
             { t: 'Grade 06 - Tamil', p: '1,000', d: 'Wednesday 4:00 PM', i: 'Aneesh Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczM1xDmxmoyjmGosMtsMar2RHAXAdZN3OK8bWuYINkzea-Yfdns-tBzZoda_wLfooxZu--xcdAuD6ik77W6Rr0s4pAgkXhl4cUtzClA923GU5AwTsm7YPLT29lRP41E-ndVIDzv9_ZumZ3YR5hmo7TFX=w1254-h913-s-no-gm', desc: 'Spoken Tamil and alphabet foundations.' },
             { t: 'Grade 07 - Mathematics', p: '1,000', d: 'Monday 2:30 PM', i: 'Dulip Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczMt12ZJbsL6Z8kHe2T5D5X3MB-oYlmrocxcaPq5F-nBLvUY6BNmHzuac99vjzeaD2lcq6RrMBthMHx-OkoFc8Tpeyg-jwqYJtip4GKuRt76Ryq41T1AgkobyznF3FEC_ADThTf1ptTimcudVzjjkuXq=w1254-h913-s-no-gm', desc: 'Building on Grade 6 math with interactive learning.' },
             { t: 'Grade 07 - Science', p: '1,000', d: 'Tuesday 2:30 PM', i: 'Jayalal Indika Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczPEcBAOX5NuFE58Es0Soylu3wW7UXdlKzvvieZWvpo2XeDhzURDnqrcVzBGADrc2dzJOECgSPm9LAXE5GE_FVXP4a29juymIJGfL9uA0OQqXP6sIaSPcGVZD5I_fcc6yhrxHwJXwF4Jz9s3H2G3_Zww=w1254-h913-s-no-gm', desc: 'Environmental and physical science topics.' },
-            { t: 'Grade 07 - English', p: '1,000', d: 'Wednsday 3:00 PM', i: 'Kalpani Teacher', img: 'https://lh3.googleusercontent.com/pw/AP1GczPtyFm1CCoKUFBGLQSeToSF8LBS1kVhwwoLszj4pE4ROhZYU2nXcmLki3XaIeqLg2619w5kSnRaXAPiObIOxMnX2IgsVRoxocGHrBk8AyZA3m4eof4SV00NiwcbZ_2-Ha7GbwwWhszyU7Ex8CcHRB4a=w1254-h913-s-no-gm', desc: 'Grammar rules and short story writing.' },
+            { t: 'Grade 07 - English', p: '1,000', d: 'Wednesday 3:00 PM', i: 'Kalpani Teacher', img: 'https://lh3.googleusercontent.com/pw/AP1GczPtyFm1CCoKUFBGLQSeToSF8LBS1kVhwwoLszj4pE4ROhZYU2nXcmLki3XaIeqLg2619w5kSnRaXAPiObIOxMnX2IgsVRoxocGHrBk8AyZA3m4eof4SV00NiwcbZ_2-Ha7GbwwWhszyU7Ex8CcHRB4a=w1254-h913-s-no-gm', desc: 'Grammar rules and short story writing.' },
             { t: 'Grade 07 - Buddhism', p: '1,000', d: 'Friday 2:30 PM', i: 'Rashmi Teacher', img: 'https://lh3.googleusercontent.com/pw/AP1GczOO8wmKJJrtLCueh4bwnXCax5Jl6uzIpKaS13YHAEFY_nozUPGyZTL8IMTr-PqSc3J1BEKXq6ef3mQXnMWpkKRsz4J8_fmHpwkqeE3BlKeDkkxJnepSIkEhHWJS2bECiOvdjncLuRF0MMSl39toUdmp=w1254-h913-s-no-gm', desc: 'In-depth study of Buddhist history.' },
             { t: 'Grade 07 - ICT', p: '1,000', d: 'Friday 5:00 PM', i: 'Vijith Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczPk7CofhPDdl-ALH0yF2Wn7TrFUlc__Y3_jZo6O82T0tDFQFSwzVot3sFgB6MUg8NcvP-zUbOug9TUGnHGzYqrJskK09dtux4eM_ngZYiMHzNywpSezvMJ_VAjyC765ayYuD8_J_3F9kYlWs6YvyVVw=w1254-h913-s-no-gm', desc: 'Word processing and basic programming concepts.' },
-            { t: 'Grade 07 - Tamil', p: '1,000', d: 'Wednsday 6:00 PM', i: 'Aneesh Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczN74Rmi5wS5ASs08mWdpHdau8gW9ggJ8pvlGiqkAQTHci4Vwmxf3kpx7XBUTDg96Bg90YOcBmD8HAZnN4NY0B_oJoJSGhW9hfRqd_ySGzv0X05-Hp4CL_l7oauknJvv7PbGZo6jcLS6t3mW6LhNrLtv=w1254-h913-s-no-gm', desc: 'Reading and writing basic Tamil sentences.' },
+            { t: 'Grade 07 - Tamil', p: '1,000', d: 'Wednesday 6:00 PM', i: 'Aneesh Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczN74Rmi5wS5ASs08mWdpHdau8gW9ggJ8pvlGiqkAQTHci4Vwmxf3kpx7XBUTDg96Bg90YOcBmD8HAZnN4NY0B_oJoJSGhW9hfRqd_ySGzv0X05-Hp4CL_l7oauknJvv7PbGZo6jcLS6t3mW6LhNrLtv=w1254-h913-s-no-gm', desc: 'Reading and writing basic Tamil sentences.' },
             { t: 'Grade 09 - History', p: '1,000', d: 'Tuesday 3:00 PM', i: 'Nuwan C Konara Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczOQ_T7AGA-ZEYhO5xl4x4leynfBGG9JMgC-ijHc4VVCejSvkL8bhqej8a9nN3_zdJFhH0dlaCXhRawxMCMmljQuldBh1cLeQqJ-a3oMASJLejfdAFdgidUgwd5rkCLhldLXlfeGjHnWKdWKqP7m6Ppn=w1254-h913-s-no-gm', desc: 'Pre-O/L syllabus coverage and timeline mappings.' },
-            { t: 'Grade 09 - English', p: '1,000', d: 'Wednsday 5:00 pM', i: 'Kalpani Teacher', img: 'https://lh3.googleusercontent.com/pw/AP1GczM_H5iLz5klnAsRZy4sq9m--EVcKy-_20E4T846cXCpHyzRUdEK2KGthPEvvMyJwpynT2ZkfQDOTYTDWPNH_eMEsFkCukj50s9l7nYGa8ZhFDgBKitd8jng1dsq7gKq9GiTIpdIibDec0MbhiMiMI80=w1254-h913-s-no-gm', desc: 'Advanced grammar and literature preparation.' },
+            { t: 'Grade 09 - English', p: '1,000', d: 'Wednesday 5:00 PM', i: 'Kalpani Teacher', img: 'https://lh3.googleusercontent.com/pw/AP1GczM_H5iLz5klnAsRZy4sq9m--EVcKy-_20E4T846cXCpHyzRUdEK2KGthPEvvMyJwpynT2ZkfQDOTYTDWPNH_eMEsFkCukj50s9l7nYGa8ZhFDgBKitd8jng1dsq7gKq9GiTIpdIibDec0MbhiMiMI80=w1254-h913-s-no-gm', desc: 'Advanced grammar and literature preparation.' },
             { t: 'Grade 09 - ICT', p: '1,000', d: 'Monday 5:00 PM', i: 'Vijith Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczOJOil1ARKEbuTN7ldCU6QtX61WbhId7_6kPM0ayLK4NO-Us6s3tAi0o1woHMzfZcQqD5lfBUwlgzdiv8mGAIvkmJo-NZx1t9of6oVyzVXS-1FHTcA23wK3curRx1tJPsbNe5PoY2Y29QwIsmTk1GBY=w1254-h913-s-no-gm', desc: 'Spreadsheets, databases, and logic gates.' },
             { t: 'Grade 10 - Sinhala', p: '1,000', d: 'Sunday 7:00 PM', i: 'Herath Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczOblLrWrZsZ9-6GpeV2vFioZejXU0j1t873COcVdglNiG1YcJ5rHGztRblYwmzJe0HJnGuU46iEjdFO-q7-AGTffvY4Z614jZVwWdK5CAsjr9uoQTazY8B-qJIOmFyC9RSn0_5uKXFTJk2-GuC8CjfK=w1254-h913-s-no-gm', desc: 'Start of O/L syllabus, literature texts.' },
-            { t: 'Grade 10 - ICT', p: '1,000', d: 'Wednsday 7:00 PM', i: 'Vijith Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczMit-crhfU6WsDH3eKWandpt5EQbD1B4iPi-8H8f-LXutLlgOY6qUsowm2-YrLfEylNw0bZmvfD5xW6AkeJXK3Lx1cX-aoROxhVMXSsGsSLIHC-KbGAzZmVcC6ikBcMMh8vw6LrsM6zSx1YrNj7GRCj=w1254-h913-s-no-gm', desc: 'Pascal/Python basics and networking.' },
+            { t: 'Grade 10 - ICT', p: '1,000', d: 'Wednesday 7:00 PM', i: 'Vijith Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczMit-crhfU6WsDH3eKWandpt5EQbD1B4iPi-8H8f-LXutLlgOY6qUsowm2-YrLfEylNw0bZmvfD5xW6AkeJXK3Lx1cX-aoROxhVMXSsGsSLIHC-KbGAzZmVcC6ikBcMMh8vw6LrsM6zSx1YrNj7GRCj=w1254-h913-s-no-gm', desc: 'Pascal/Python basics and networking.' },
             { t: 'Grade 11 - Sinhala', p: '1,000', d: 'Monday 5:00 PM', i: 'Herath Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczNK7n0siATuMi1eE1Uqj2GrAD6QpL71s9ad7DZOhmoD5KU3KQLezSqNjA_eIbQn5lxTnQh2nccpHNbQHsbQFwOwy0w9aOGnSEu9M7e5hXJMYVnshJR06JNRqAKDQBPR0hTqXrD9nljXYUTWXbG50Ej_=w1254-h913-s-no-gm', desc: 'Full revision and model paper discussions.' },
             { t: 'Grade 11 - History', p: '1,000', d: 'Tuesday 7:00 PM', i: 'Nuwan C Konara Sir', img: 'https://lh3.googleusercontent.com/pw/AP1GczM3AjRq_LGtVHi6dONi8sFhJoUMYpfSsDgTdXQRm0y6Lv9iGpFkd7egdE4oPmsiyv6rPpkzQ_LrIc4eyQQ8RKZIYv56fblO8QLtC5xfgBDnJZnyFHorTwvPMYJFNjnpruGS22m9cw3kUCesEiTFci6R=w1254-h913-s-no-gm', desc: 'Targeted map marking and essay answers for O/L.' },
         ];
