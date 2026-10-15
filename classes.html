@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Classes | APEX Institute OF Education</title>
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Uses the exact same CSS styles from index.html -->
+    <style>
+        :root {
+            --bg-color: #fffbeb54; --primary-grad: linear-gradient(135deg, #FF3B30 0%, #FF9500 100%);
+            --bg-grad: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+            --orange: #FF9500; --yellow: #FFCC00; --dark: #1C1C1E; --slate: #3A3A3C; --white: #E5E5EA;
+            --card-bg: rgba(255, 255, 255, 0.7); --nav-bg: rgba(255, 255, 255, 0.55);
+            --nav-border: rgba(255, 255, 255, 0.4); --modal-bg: #ffffff; --border-light: #E5E5EA;
+        }
+        body.dark-mode {
+            --bg-color: #1212128d; --bg-grad: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            --dark: #E5E5EA; --slate: #8E8E93; --white: #1C1C1E; --card-bg: rgba(30, 30, 30, 0.8);
+            --nav-bg: rgba(28, 28, 30, 0.75); --nav-border: rgba(255, 255, 255, 0.08); --modal-bg: #1C1C1E;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; text-decoration: none !important; }
+        body { color: var(--dark); min-height: 100vh; background-color: var(--bg-color); background-image: var(--bg-grad), url('https://i.ibb.co/k7XV5kD/e5a3b600681fd79ebb5446e942459334.jpg?auto=format&fit=crop'); background-size: cover; background-position: center; }
+        nav.navbar { background: var(--nav-bg); backdrop-filter: blur(24px); padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 20px; z-index: 1000; border: 1px solid var(--nav-border); border-radius: 50px; width: 90%; max-width: 1200px; margin: 20px auto; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--slate); font-weight: 700; font-size: 0.9rem; }
+        .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: var(--card-bg); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid var(--nav-border); overflow: hidden; }
+        .card-img-container { width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 30px; }
+        .enroll-btn { display: block; text-align: center; padding: 15px; background: var(--nav-bg); color: var(--dark); font-weight: 700; border-radius: 12px; margin-top: 20px; border: 1px solid var(--border-light); cursor: pointer; }
+        .search-container input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid var(--nav-border); background: var(--card-bg); color: var(--dark); outline: none; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm" style="width:45px;height:45px;border-radius:50%;">
+        </div>
+        <div style="font-size: 1.4rem; font-weight: 800;">APEX<span style="color: var(--orange);">IOE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html" class="active">All Classes</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="results.html">Results</a></li>
+        </ul>
+    </nav>
+
+    <div style="padding: 40px 10%;">
+        <h2 id="all-classes-title" style="font-size: 2.5rem; font-weight: 800; text-align: center; margin-bottom: 30px;">All Available <span style="color: var(--orange)">Classes</span></h2>
+        <div class="search-container" style="max-width: 600px; margin: 0 auto 50px;">
+            <input type="text" id="class-search" placeholder="Search by grade, subject, or teacher..." onkeyup="filterClasses()">
+        </div>
+        <div class="grid" id="all-classes-grid"></div>
+    </div>
+
+    <script>
+        const BASE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSY4iju1X2pOZN8htcYUKqmOKJv14r52kHEKwGTWJKh5lrmaV265qN1ku7icdqdlhFgAIju78Ly7JMs/pub?output=csv';
+        let classes = [];
+
+        async function loadClasses() {
+            const res = await fetch(BASE_SHEET_URL);
+            const text = await res.text();
+            const lines = text.trim().split(/\r?\n/);
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const cols = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(col => col.replace(/^"\vert{}"$/g, '').trim());
+                classes.push({ t: cols[0], p: cols[1], d: cols[2], i: cols[3], desc: cols[4], img: cols[5] });
+            }
+            
+            // Check if filtered by URL parameter (e.g. classes.html?grade=Grade 09)
+            const urlParams = new URLSearchParams(window.location.search);
+            const gradeFilter = urlParams.get('grade');
+            if (gradeFilter) {
+                const filtered = classes.filter(c => c.t.includes(gradeFilter));
+                document.getElementById('all-classes-title').innerHTML = `Classes for <span style="color: var(--orange)">${gradeFilter}</span>`;
+                renderGrid(filtered);
+            } else {
+                renderGrid(classes);
+            }
+        }
+
+        function renderGrid(dataList) {
+            document.getElementById('all-classes-grid').innerHTML = dataList.map(c => `
+                <div class="card">
+                    <div class="card-img-container"><img src="${c.img}" alt="${c.t}"></div>
+                    <div class="card-body">
+                        <h3>${c.t}</h3>
+                        <p style="color: var(--orange); font-weight: 700; margin-top: 5px;">${c.i}</p>
+                        <p style="color: var(--slate); font-size: 0.85rem; margin-top: 5px;">Scheduled for ${c.d}.</p>
+                        <button class="enroll-btn" onclick="window.open('https://wa.me/94773298884?text=Hi, I want to join ${c.t}')">Join via WhatsApp</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterClasses() {
+            const query = document.getElementById('class-search').value.toLowerCase();
+            const filtered = classes.filter(c => c.t.toLowerCase().includes(query) || c.i.toLowerCase().includes(query));
+            renderGrid(filtered);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadClasses);
+    </script>
+</body>
+</html>
