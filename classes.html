@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <title>All Classes | APEX Institute OF Education Bibile</title>
+    
+    <meta name="description" content="Explore all tuition classes available at APEX Institute Bibile for Grades 1-11.">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fffbeb54; 
+            --primary-grad: linear-gradient(135deg, #FF3B30 0%, #FF9500 100%);
+            --bg-grad: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+            --orange: #FF9500;
+            --yellow: #FFCC00;
+            --dark: #1C1C1E;
+            --slate: #3A3A3C;
+            --white: #E5E5EA;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --nav-bg: rgba(255, 255, 255, 0.55);
+            --nav-border: rgba(255, 255, 255, 0.4);
+            --modal-bg: #ffffff;
+            --border-light: #E5E5EA;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.1);
+            --shadow-glass: 0 8px 32px rgba(0,0,0,0.08);
+            --transition: all 0.6s cubic-bezier(0.25, 1, 0.35, 1);
+        }
+
+        body.dark-mode {
+            --bg-color: #1212128d; 
+            --bg-grad: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            --dark: #E5E5EA;
+            --slate: #8E8E93;
+            --white: #1C1C1E;
+            --card-bg: rgba(30, 30, 30, 0.8);
+            --nav-bg: rgba(28, 28, 30, 0.75);
+            --nav-border: rgba(255, 255, 255, 0.08);
+            --modal-bg: #1C1C1E;
+            --border-light: rgba(255, 255, 255, 0.05);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.6);
+            --shadow-glass: 0 8px 32px rgba(0,0,0,0.5);
+        }
+
+        body.loading-state { overflow: hidden !important; touch-action: none !important; }
+
+        .loader-wrapper {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);
+            z-index: 99999; display: flex; justify-content: center; align-items: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .loader-wrapper.fade-out { opacity: 0; visibility: hidden; }
+
+        .mac-spinner {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: conic-gradient(#34B0F7 0deg 45deg, #64D2FF 45deg 90deg, #30D158 90deg 135deg, #FFD60A 135deg 180deg, #FF9F0A 180deg 225deg, #FF375F 225deg 270deg, #BF5AF2 270deg 315deg, #5E5CE6 315deg 360deg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15), inset 0 0 12px rgba(255,255,255,0.5);
+            animation: mac-spin 1.2s linear infinite; position: relative;
+        }
+        @keyframes mac-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.35, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        * { 
+            margin: 0; padding: 0; box-sizing: border-box; 
+            font-family: 'Plus Jakarta Sans', "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif; 
+            text-decoration: none !important; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none;
+            -webkit-tap-highlight-color: transparent; outline: none; 
+        }
+
+        html { scroll-behavior: smooth; }
+        body { color: var(--dark); line-height: 1.6; overflow-x: hidden; min-height: 100vh; transition: background-color 0.6s ease, color 0.6s ease; }
+
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background-color: var(--bg-color);
+            background-image: var(--bg-grad), url('https://i.ibb.co/k7XV5kD/e5a3b600681fd79ebb5446e942459334.jpg?auto=format&fit=crop'); 
+            background-size: cover; background-position: center center; background-repeat: no-repeat; background-blend-mode: soft-light;
+        }
+        body.dark-mode::before { background-blend-mode: overlay; }
+
+        .top-blur-strip {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100px;
+            -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);
+            z-index: 999; pointer-events: none; opacity: 0; transition: opacity 0.6s ease;
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+        body.scrolled .top-blur-strip { opacity: 1; }
+
+        nav.navbar {
+            background: var(--nav-bg); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+            padding: 12px 30px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: var(--shadow-glass); position: sticky; top: 20px; z-index: 1000;
+            border: 1px solid var(--nav-border); transition: var(--transition);
+            border-radius: 50px; width: 90%; max-width: 1200px; margin: 0 auto;
+        }
+        nav.navbar.scrolled { top: 10px; padding: 8px 30px; border-color: var(--white); }
+        
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--slate); font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: var(--transition); }
+        .nav-links a:hover { color: var(--orange); transform: translateY(-2px); }
+
+        .dropdown { position: relative; display: flex; align-items: center; }
+        .dropdown > a { color: var(--orange) !important; display: flex; align-items: center; gap: 5px; }
+        .dropdown-content {
+            display: block; position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px);
+            background: var(--modal-bg); min-width: 160px; box-shadow: var(--shadow-md); border-radius: 16px;
+            border: 1px solid var(--nav-border); padding: 10px 0; z-index: 1001; max-height: 300px; overflow-y: auto;
+            margin-top: 15px; opacity: 0; visibility: hidden; transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+        }
+        .dropdown.open .dropdown-content { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--slate) !important; font-size: 0.85rem; text-align: center; }
+        .dropdown-content a:hover { background: rgba(255, 149, 0, 0.1); color: var(--orange) !important; padding-left: 25px; }
+
+        .header-actions { display: flex; align-items: center; gap: 15px; }
+        .theme-toggle { font-size: 1.3rem; color: var(--slate); cursor: pointer; transition: var(--transition); }
+        .theme-toggle:hover { color: var(--orange); transform: rotate(15deg) scale(1.1); }
+        
+        .lang-toggle { font-size: 0.85rem; font-weight: 800; color: var(--slate); cursor: pointer; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--border-light); }
+        .menu-toggle { display: none; font-size: 1.5rem; color: var(--dark); cursor: pointer; z-index: 1001; }
+        
+        .nav-left { display: flex; align-items: center; gap: 15px; }
+        .logo-container { display: flex; align-items: center; cursor: pointer; }
+        .header-logo-img { width: 45px; height: 45px; object-fit: contain; border-radius: 50%; border: 2px solid white; box-shadow: var(--shadow-sm); }
+        .brand-pill { font-size: 1.4rem; font-weight: 800; color: var(--dark); letter-spacing: -1px; margin-left: 10px; }
+        .brand-pill span { color: var(--orange); }
+
+        #all-classes-page { padding: 60px 10% 100px; min-height: 80vh; position: relative; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: var(--card-bg); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid var(--nav-border); overflow: hidden; transition: var(--transition); }
+        .card-img-container { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: rgba(0,0,0,0.05); }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s; }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1); border-color: var(--yellow); }
+        .card:hover .card-img-container img { transform: scale(1.1); }
+        .card-body { padding: 30px; }
+        .enroll-btn { display: block; text-align: center; padding: 15px; background: var(--nav-bg); color: var(--dark); font-weight: 700; border-radius: 12px; margin-top: 20px; border: 1px solid var(--border-light); cursor: pointer; width: 100%; transition: var(--transition); }
+        .card:hover .enroll-btn { background: var(--primary-grad); color: white; border-color: transparent; transform: scale(1.02); }
+
+        .search-container input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid var(--nav-border); background: var(--card-bg); color: var(--dark); outline: none; box-shadow: var(--shadow-sm); font-size: 1rem; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: var(--transition); }
+        .search-container input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,149,0,0.1); }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28, 28, 30, 0.7); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 3000; opacity: 0; transition: opacity 0.6s ease; }
+        .modal-overlay.show { opacity: 1; }
+        .modal-box { background: var(--modal-bg); width: 90%; max-width: 450px; border-radius: 32px; padding: 40px; position: relative; transform: scale(0.85); transition: transform 0.6s cubic-bezier(0.25, 1, 0.35, 1); border: 1px solid var(--nav-border); }
+        .modal-overlay.show .modal-box { transform: scale(1); }
+        .modal-heading { color: var(--orange); margin-bottom: 20px; }
+        .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; z-index: 10; color: var(--slate); }
+        .course-info-row { display: flex; align-items: center; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+        .course-info-row--compact { border-bottom: none; }
+        .course-info-icon { color: var(--slate); }
+        .course-info-label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--slate); }
+        .course-info-value { font-weight: 700; font-size: 0.9rem; }
+        .confirm-btn { background: var(--primary-grad); color: white; padding: 15px; border-radius: 14px; font-weight: 700; border: none; cursor: pointer; width: 100%; margin-top: 10px; }
+        .modal-whatsapp-btn { background: #34C759; color: white; padding: 15px; border-radius: 14px; font-weight: 700; border: none; cursor: pointer; width: 100%; margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+        .whatsapp-float { position: fixed; bottom: 30px; right: 20px; background: #34C759; color: white; padding: 12px 30px; border-radius: 100px; font-weight: 700; display: flex; align-items: center; gap: 12px; z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+        
+        footer { background: #1C1C1E; color: white; padding: 30px 10%; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+        footer p { margin: 0; width: 100%; color: #8E8E93; }
+        .creator-container { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 10px; }
+        .creator-tag { font-size: 0.75rem; color: #8E8E93; opacity: 0.9; }
+        .social-links { display: flex; gap: 15px; }
+        .social-links a { color: #8E8E93; font-size: 1.1rem; }
+
+        @media (max-width: 768px) {
+            nav.navbar { width: 94%; top: 15px; padding: 10px 20px; }
+            .brand-pill { display: block; position: absolute; left: 50%; transform: translateX(-50%); margin-left: 0; }
+            .menu-toggle { display: block; order: 2; }
+            .nav-links { 
+                position: absolute; top: 110%; left: 0; width: 100%; background: var(--modal-bg); 
+                flex-direction: column; padding: 15px 0; gap: 0; display: flex; opacity: 0; visibility: hidden;
+                transform: translateY(-20px); transition: opacity 0.6s ease, transform 0.6s, visibility 0.6s;
+                box-shadow: var(--shadow-md); border-radius: 20px; border: 1px solid var(--nav-border); pointer-events: none; z-index: 1001;
+            }
+            .nav-links.active { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+            .nav-links li { width: 100%; display: flex; flex-direction: column; align-items: center; padding: 15px 0; position: relative; } 
+            .dropdown > a { justify-content: center; width: 100%; }
+            .dropdown-content { position: absolute !important; top: 80%; left: 50% !important; transform: translateX(-50%) !important; display: none; width: 70%; max-width: 200px; background: var(--modal-bg) !important; border: 1px solid var(--border-light) !important; border-radius: 16px; box-shadow: var(--shadow-md) !important; margin-top: 5px; text-align: center; z-index: 2000; }
+            .dropdown.open .dropdown-content { display: block; opacity: 1; visibility: visible; }
+        }
+    </style>
+</head>
+<body class="loading-state">
+
+    <div id="page-loader" class="loader-wrapper">
+        <div class="mac-spinner"></div>
+    </div>
+
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') document.body.classList.add('dark-mode');
+    </script>
+
+    <div class="top-blur-strip"></div>
+
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-box">
+            <span class="close-modal" onclick="closePopup('courseModal')" aria-label="Close Modal">×</span>
+            <h2 id="popTitle" class="modal-heading">Course Details</h2>
+            <div class="course-info-row"><i class="fas fa-book-open course-info-icon"></i><div><span class="course-info-label">SYLLABUS</span><p id="popDesc" class="course-info-value"></p></div></div>
+            <div class="course-info-row"><i class="fas fa-user-tie course-info-icon"></i><div><span class="course-info-label">INSTRUCTOR</span><p id="popTeacher" class="course-info-value"></p></div></div>
+            <div class="course-info-row"><i class="fas fa-clock course-info-icon"></i><div><span class="course-info-label">TIME & DATE</span><p id="popTime" class="course-info-value"></p></div></div>
+            <div class="course-info-row course-info-row--compact"><i class="fas fa-tag course-info-icon"></i><div><span class="course-info-label">MONTHLY FEE</span><p id="popPrice" class="course-info-value"></p></div></div>
+            
+            <button class="modal-whatsapp-btn" onclick="contactViaWhatsApp()"><i class="fab fa-whatsapp"></i> Chat for More Info</button>
+            <button class="confirm-btn" onclick="closePopup('courseModal')">Close Details</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container" onclick="window.location.href='index.html'">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm" alt="APEX Logo" class="header-logo-img" loading="lazy">
+            </div>
+            <div class="lang-toggle" onclick="toggleLanguage()" title="Translate"><span id="lang-text">EN</span></div>
+        </div>
+        <div class="brand-pill">APEX<span>IOE</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown" id="gradeDropdown">
+                <a href="javascript:void(0)" onclick="toggleDropdown(event)"><span>Grades</span> <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content" id="grade-dropdown"></div>
+            </li>
+            <li><a href="classes.html" style="color: var(--orange);">All Classes</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+            <div class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode"><i class="fas fa-moon" id="theme-icon"></i></div>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars" id="menu-icon"></i></div>
+        </div>
+    </nav>
+
+    <div id="all-classes-page">
+        <h2 id="all-classes-title" style="font-size: 2.5rem; font-weight: 800; text-align: center; margin-bottom: 30px;">All Available <span style="color: var(--orange)">Classes</span></h2>
+        
+        <div class="search-container" style="max-width: 600px; margin: 0 auto 50px;">
+            <input type="text" id="class-search" placeholder="Search by grade, subject, or teacher..." onkeyup="filterClasses()" aria-label="Search classes">
+        </div>
+
+        <div class="grid" id="all-classes-grid"></div>
+    </div>
+
+    <footer>
+        <div class="brand-pill" style="color: white; margin-bottom: 5px;">APEX<span style="color: var(--orange);">IOE</span></div><br>
+        <p>© 2026 APEX INSTITUTE OF EDUCATION<br>Hotline: +94 773 298 884</p>
+        <div class="creator-container">
+            <p class="creator-tag">Created by Indusara Shashindu</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1BQuk3gEv2/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/indusarashashidu?igsh=dTljcGs2NGpldnFt&utm_source=qr" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/indusarashashidu?igsh=dTljcGs2NGpldnFt&utm_source=qr" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/94773321069" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94773298884" class="whatsapp-float" aria-label="Join via Whatsapp">
+        <i class="fab fa-whatsapp" style="font-size: 1.6rem;"></i>
+        <span>Click to join classes!</span>
+    </a>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => {
+                    document.body.classList.remove('loading-state');
+                    loader.style.display = 'none';
+                }, 600);
+            }
+        });
+
+        const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSY4iju1X2pOZN8htcYUKqmOKJv14r52kHEKwGTWJKh5lrmaV265qN1ku7icdqdlhFgAIju78Ly7JMs/pub?output=csv';
+        let classes = [];
+
+        function parseCSV(text) {
+            const lines = text.trim().split(/\r?\n/);
+            const result = [];
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const cols = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(col => col.replace(/^"|"$/g, '').trim());
+                if (cols.length >= 6) {
+                    result.push({ t: cols[0], p: cols[1], d: cols[2], i: cols[3], desc: cols[4], img: cols[5] });
+                }
+            }
+            return result;
+        }
+
+        async function fetchClassesFromSheet() {
+            try {
+                const response = await fetch(GOOGLE_SHEET_CSV_URL);
+                const csvText = await response.text();
+                classes = parseCSV(csvText);
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const gradeParam = urlParams.get('grade');
+                if (gradeParam) {
+                    showGradeClasses(gradeParam);
+                } else {
+                    renderClasses('all-classes-grid', classes);
+                }
+            } catch (error) {
+                console.error('Error fetching data from Google Sheet:', error);
+            }
+        }
+
+        let currentLang = 'EN';
+        function toggleLanguage() {
+            currentLang = currentLang === 'EN' ? 'SI' : 'EN';
+            document.getElementById('lang-text').innerText = currentLang;
+            renderClasses('all-classes-grid', classes);
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.getElementById('theme-icon').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-icon').className = 'fas fa-sun';
+        }
+
+        const dropdown = document.getElementById('grade-dropdown');
+        dropdown.innerHTML += `<a href="classes.html?grade=Grades+1-5">Grades 1-5</a>`;
+        for (let i = 6; i <= 11; i++) dropdown.innerHTML += `<a href="classes.html?grade=Grade+${i < 10 ? '0'+i : i}">Grade ${i}</a>`;
+
+        function toggleDropdown(e) {
+            e.stopPropagation();
+            e.preventDefault(); 
+            document.getElementById('gradeDropdown').classList.toggle('open');
+        }
+
+        function showGradeClasses(grade) {
+            let filtered = grade === 'Grades 1-5' ? 
+                classes.filter(c => ['Grade 01', 'Grade 02', 'Grade 03', 'Grade 04', 'Grade 05'].some(g => c.t.includes(g))) :
+                classes.filter(c => c.t.includes(grade));
+            
+            document.getElementById('all-classes-title').innerHTML = `Classes for <span style="color: var(--orange)">${grade}</span>`;
+            renderClasses('all-classes-grid', filtered);
+        }
+
+        function renderClasses(targetId, dataList) {
+            const container = document.getElementById(targetId);
+            if(!container) return;
+            container.innerHTML = dataList.map(c => `
+                <div class="card">
+                    <div class="card-img-container"><img src="${c.img}" alt="${c.t}" loading="lazy"></div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.1rem;">${c.t}</h3>
+                        <p style="color: var(--orange); font-weight: 700; font-size: 0.9rem; margin-top: 5px;">${c.i}</p>
+                        <p style="color:var(--slate); font-size:0.85rem; margin-top: 5px;">Scheduled for ${c.d}.</p>
+                        <button class="enroll-btn" onclick="openPopup('${c.t}', 'LKR ${c.p}', '${c.d}', '${c.i}', '${c.desc}')">View Course Details</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterClasses() {
+            const query = document.getElementById('class-search').value.toLowerCase();
+            const filtered = classes.filter(c => c.t.toLowerCase().includes(query) || c.i.toLowerCase().includes(query));
+            renderClasses('all-classes-grid', filtered);
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = nav.classList.toggle('active');
+            icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+        }
+
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('active');
+            const icon = document.getElementById('menu-icon');
+            if(icon) icon.className = 'fas fa-bars';
+            document.getElementById('gradeDropdown').classList.remove('open');
+        }
+
+        function openPopup(title, price, time, teacher, desc) {
+            document.getElementById('popTitle').innerText = title;
+            document.getElementById('popPrice').innerText = price;
+            document.getElementById('popTime').innerText = time;
+            document.getElementById('popTeacher').innerText = teacher;
+            document.getElementById('popDesc').innerText = desc || "Full syllabus coverage and exam prep.";
+            const modal = document.getElementById('courseModal');
+            modal.style.display = 'flex';
+            setTimeout(() => modal.classList.add('show'), 10);
+        }
+
+        function contactViaWhatsApp() {
+            const title = document.getElementById('popTitle').innerText;
+            const teacher = document.getElementById('popTeacher').innerText;
+            const time = document.getElementById('popTime').innerText;
+            const phone = "94773298884";
+            const message = `Hi APEX, I'm interested in the following class:%0A%0A 📚 *Class:* ${title}%0A 🧑‍🏫 *Instructor:* ${teacher}%0A 🕰️ *Time:* ${time}%0A%0A Can I please get more information regarding enrollment?`;
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+
+        function closePopup(id) {
+            const modal = document.getElementById(id);
+            if(modal) {
+                modal.classList.remove('show');
+                setTimeout(() => modal.style.display = 'none', 600);
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.dropdown') && !event.target.closest('.menu-toggle')) closeMenu();
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchClassesFromSheet);
+    </script>
+</body>
+</html>

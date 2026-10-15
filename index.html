@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <title>APEX Institute OF Education | Best Classes in Bibile</title>
+    <meta name="description" content="Looking for the best tuition classes in Bibile? APEX Institute offers expert-led classes for Grades 1-11 with smart-board technology.">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fffbeb54; 
+            --primary-grad: linear-gradient(135deg, #FF3B30 0%, #FF9500 100%);
+            --bg-grad: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+            --orange: #FF9500; --yellow: #FFCC00; --dark: #1C1C1E; --slate: #3A3A3C; --white: #E5E5EA;
+            --card-bg: rgba(255, 255, 255, 0.7); --nav-bg: rgba(255, 255, 255, 0.55);
+            --nav-border: rgba(255, 255, 255, 0.4); --modal-bg: #ffffff; --border-light: #E5E5EA;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05); --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.1);
+            --shadow-glass: 0 8px 32px rgba(0,0,0,0.08); --transition: all 0.6s cubic-bezier(0.25, 1, 0.35, 1);
+        }
+        body.dark-mode {
+            --bg-color: #1212128d; --bg-grad: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            --dark: #E5E5EA; --slate: #8E8E93; --white: #1C1C1E; --card-bg: rgba(30, 30, 30, 0.8);
+            --nav-bg: rgba(28, 28, 30, 0.75); --nav-border: rgba(255, 255, 255, 0.08); --modal-bg: #1C1C1E;
+            --border-light: rgba(255, 255, 255, 0.05); --shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.6); --shadow-glass: 0 8px 32px rgba(0,0,0,0.5);
+        }
+        body.loading-state { overflow: hidden !important; touch-action: none !important; }
+        .loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg-color); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); z-index: 99999; display: flex; justify-content: center; align-items: center; transition: opacity 0.6s ease, visibility 0.6s ease; }
+        .loader-wrapper.fade-out { opacity: 0; visibility: hidden; }
+        .mac-spinner { width: 44px; height: 44px; border-radius: 50%; background: conic-gradient(#34B0F7 0deg 45deg, #64D2FF 45deg 90deg, #30D158 90deg 135deg, #FFD60A 135deg 180deg, #FF9F0A 180deg 225deg, #FF375F 225deg 270deg, #BF5AF2 270deg 315deg, #5E5CE6 315deg 360deg); animation: mac-spin 1.2s linear infinite; }
+        @keyframes mac-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; text-decoration: none !important; -webkit-tap-highlight-color: transparent; outline: none; user-select: none; }
+        html { scroll-behavior: smooth; }
+        body { color: var(--dark); line-height: 1.6; min-height: 100vh; transition: background-color 0.6s ease, color 0.6s ease; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-color: var(--bg-color); background-image: var(--bg-grad), url('https://i.ibb.co/k7XV5kD/e5a3b600681fd79ebb5446e942459334.jpg?auto=format&fit=crop'); background-size: cover; background-position: center; }
+        nav.navbar { background: var(--nav-bg); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-glass); position: sticky; top: 20px; z-index: 1000; border: 1px solid var(--nav-border); border-radius: 50px; width: 90%; max-width: 1200px; margin: 20px auto 0; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--slate); font-weight: 700; font-size: 0.9rem; transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+        .dropdown { position: relative; display: flex; align-items: center; }
+        .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--modal-bg); min-width: 160px; box-shadow: var(--shadow-md); border-radius: 16px; border: 1px solid var(--nav-border); padding: 10px 0; z-index: 1001; margin-top: 15px; }
+        .dropdown.open .dropdown-content { display: block; }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--slate) !important; font-size: 0.85rem; text-align: center; }
+        .header-actions { display: flex; align-items: center; gap: 15px; }
+        .theme-toggle, .notice-toggle { font-size: 1.3rem; color: var(--slate); cursor: pointer; transition: var(--transition); }
+        .theme-toggle:hover, .notice-toggle:hover { color: var(--orange); }
+        .lang-toggle { font-size: 0.85rem; font-weight: 800; color: var(--slate); cursor: pointer; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--border-light); display: flex; align-items: center; justify-content: center; }
+        .nav-left { display: flex; align-items: center; gap: 15px; }
+        .header-logo-img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid white; }
+        .brand-pill { font-size: 1.4rem; font-weight: 800; color: var(--dark); }
+        .brand-pill span { color: var(--orange); }
+        .hero { display: flex; align-items: center; padding: 60px 10% 80px; gap: 60px; }
+        .hero-content { flex: 1.2; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 25px; }
+        .hero h1 span { background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .all-classes-btn { background: var(--primary-grad); color: white; padding: 12px 30px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; box-shadow: var(--shadow-sm); transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; }
+        .all-classes-btn:hover { transform: scale(1.08); }
+        .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 12px 25px; border-radius: 50px; font-weight: 700; border: 2px solid var(--orange); color: var(--orange); background: transparent; }
+        .hero-images { flex: 1; display: flex; justify-content: center; }
+        .img-feature { width: 100%; max-width: 550px; border-radius: 40px; overflow: hidden; border: 8px solid var(--white); box-shadow: var(--shadow-md); }
+        .classes-section, .inquiry-section, .faq-section, .map-section { padding: 60px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: var(--card-bg); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border-radius: 24px; border: 1px solid var(--nav-border); overflow: hidden; transition: var(--transition); }
+        .card-img-container { width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+        .card-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; }
+        .card:hover { transform: translateY(-12px); border-color: var(--yellow); }
+        .card:hover .card-img-container img { transform: scale(1.1); }
+        .card-body { padding: 30px; }
+        .enroll-btn { display: block; text-align: center; padding: 15px; background: var(--nav-bg); color: var(--dark); font-weight: 700; border-radius: 12px; margin-top: 20px; border: 1px solid var(--border-light); cursor: pointer; transition: var(--transition); }
+        .card:hover .enroll-btn { background: var(--primary-grad); color: white; border: transparent; }
+        .glass-form { background: var(--card-bg); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); padding: 40px; border-radius: 24px; border: 1px solid var(--nav-border); display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto; }
+        .glass-input { width: 100%; padding: 15px 20px; border-radius: 12px; border: 1px solid var(--border-light); background: var(--nav-bg); color: var(--dark); outline: none; }
+        .faq-item { background: var(--card-bg); border-radius: 16px; margin-bottom: 15px; padding: 20px; border: 1px solid var(--nav-border); cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--slate); }
+        .faq-item.active .faq-answer { max-height: 200px; margin-top: 15px; }
+        .map-container { width: 100%; height: 450px; border-radius: 32px; overflow: hidden; border: 8px solid var(--white); }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(28,28,30,0.7); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 3000; }
+        .modal-box { background: var(--modal-bg); width: 90%; max-width: 450px; border-radius: 32px; padding: 40px; position: relative; border: 1px solid var(--nav-border); }
+        .confirm-btn, .modal-whatsapp-btn { width: 100%; padding: 15px; border-radius: 14px; font-weight: 700; border: none; cursor: pointer; margin-top: 15px; }
+        .modal-whatsapp-btn { background: #34C759; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .confirm-btn { background: var(--primary-grad); color: white; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 20px; background: #34C759; color: white; padding: 12px 30px; border-radius: 100px; font-weight: 700; display: flex; align-items: center; gap: 12px; z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+        footer { background: #1C1C1E; color: white; padding: 30px 10%; text-align: center; }
+        footer p { color: #8E8E93; }
+        .social-links { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
+        .social-links a { color: #8E8E93; }
+        @media(max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body class="loading-state">
+    <div id="page-loader" class="loader-wrapper"><div class="mac-spinner"></div></div>
+
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-box">
+            <span style="position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer;" onclick="closePopup('courseModal')">×</span>
+            <h2 id="popTitle" style="color: var(--orange); margin-bottom: 20px;">Course Details</h2>
+            <p><strong>Syllabus:</strong> <span id="popDesc"></span></p>
+            <p style="margin-top: 10px;"><strong>Instructor:</strong> <span id="popTeacher"></span></p>
+            <p style="margin-top: 10px;"><strong>Time & Date:</strong> <span id="popTime"></span></p>
+            <p style="margin-top: 10px;"><strong>Monthly Fee:</strong> <span id="popPrice"></span></p>
+            <button class="modal-whatsapp-btn" onclick="contactViaWhatsApp()"><i class="fab fa-whatsapp"></i> Chat for More Info</button>
+            <button class="confirm-btn" onclick="closePopup('courseModal')">Close Details</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="noticeModal">
+        <div class="modal-box">
+            <span style="position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer;" onclick="closePopup('noticeModal')">×</span>
+            <h2 id="noticeTitle" style="color: var(--orange); margin-bottom: 20px;">Special Notice</h2>
+            <p id="noticeText">Loading notices...</p>
+            <button class="confirm-btn" onclick="closePopup('noticeModal')">Close</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container" onclick="location.href='index.html'">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOg65fvBOxhQFfWkhr9enxOp6QSg_iV4iO1rTSMGen05bBwHKLywS7MFpPdhvHiTlWAYrKu4XHfbCydNTHp_-NqxTu0lYcBM0d9lhVdLQ9FXYEiGoIaK9iBO8EgMKbHbAg7J82Cd7AkFqOQeApdmMiz=w913-h913-s-no-gm" class="header-logo-img">
+            </div>
+            <div class="lang-toggle" onclick="toggleLanguage()"><span id="lang-text">EN</span></div>
+        </div>
+        <div class="brand-pill">APEX<span>IOE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown" id="gradeDropdown" onclick="toggleDropdown(event)">
+                <a href="javascript:void(0)">Grades <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content" id="grade-dropdown"></div>
+            </li>
+            <li><a href="classes.html">All Classes</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+            <div class="notice-toggle" onclick="openNoticePopup()"><i class="fas fa-bell"></i></div>
+            <div class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon" id="theme-icon"></i></div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span style="color: var(--orange); font-weight: 800; text-transform: uppercase;">The #1 modern education center in Bibile</span>
+            <h1>APEX<span> INSTITUTE </span>OF EDUCATION.</h1>
+            <p class="hero-description">We offer expert-led classes for Grades 1-11 using modern technology</p>
+            <div class="hero-actions">
+                <button class="all-classes-btn" onclick="location.href='classes.html'">View All Classes <i class="fas fa-arrow-right"></i></button>
+                <a href="timetable.pdf" target="_blank" class="btn-outline"><i class="fas fa-download"></i> Download Timetable</a>
+            </div>
+        </div>
+        <div class="hero-images">
+            <div class="img-feature">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczO8dUvhJ-HU3h7owzbPal8jXgADPTU-ZYkXeCst0Omi2ALQa3VozFUdgPbhwSGpejMqXnzBVwDtHIn5BvZW8bUTnCTZMVLwC9CILcv_GpDr3g9JUeupIb8A9humhCR18UMKdcW48nmQapAa3WxlfQMt=w750-h585-s-no-gm">
+            </div>
+        </div>
+    </section>
+
+    <section class="classes-section">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 40px;">Popular Classes</h2>
+        <div class="grid" id="featured-classes"></div>
+    </section>
+
+    <section class="inquiry-section" id="inquiry">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 10px;">Inquire Now</h2>
+        <p style="color: var(--slate); text-align: center; margin-bottom: 30px;">Leave your details and we will get back to you shortly.</p>
+        <form action="https://formspree.io/f/mlgvdpad" method="POST" class="glass-form">
+            <input type="text" name="name" class="glass-input" placeholder="Student Name" required>
+            <input type="tel" name="phone" class="glass-input" placeholder="WhatsApp Number" required>
+            <select name="grade" class="glass-input" required>
+                <option value="" disabled selected>Select Grade</option>
+                <option value="1-5">Grades 1-5</option>
+                <option value="6">Grade 6</option>
+                <option value="7">Grade 7</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+            </select>
+            <button type="submit" class="enroll-btn" style="background: var(--primary-grad); color: white; border:none;">Send Inquiry</button>
+        </form>
+    </section>
+
+    <section class="faq-section">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <h3>How do I enroll in a class? <i class="fas fa-plus"></i></h3>
+                <p class="faq-answer">Click 'View Course Details' on any class and hit the WhatsApp button to chat with our admin directly.</p>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <h3>Are classes online or physical? <i class="fas fa-plus"></i></h3>
+                <p class="faq-answer">All our classes are conducted physically at our modern Bibile center using digital smart boards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2 style="text-align: center; font-size: 2.2rem; font-weight: 800;">Find Us in Bibile</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.364491790449!2d81.20803607498703!3d7.134777792868953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDgnMDUuMiJOIDgxwrAxMiczOC4yIkU!5e0!3m2!1sen!2slk!4v1710086400000"></iframe>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="brand-pill" style="color: white; margin-bottom: 5px;">APEX<span style="color: var(--orange);">IOE</span></div>
+        <p>© 2026 APEX INSTITUTE OF EDUCATION<br>Hotline: +94 773 298 884</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/1BQuk3gEv2/"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/94773298884"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94773298884" class="whatsapp-float">
+        <i class="fab fa-whatsapp" style="font-size: 1.6rem;"></i> Click to join classes!
+    </a>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) { loader.classList.add('fade-out'); setTimeout(() => loader.style.display = 'none', 600); }
+        });
+
+        const BASE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSY4iju1X2pOZN8htcYUKqmOKJv14r52kHEKwGTWJKh5lrmaV265qN1ku7icdqdlhFgAIju78Ly7JMs/pub?output=csv';
+        let classes = [];
+
+        function parseCSV(text) {
+            const lines = text.trim().split(/\r?\n/);
+            const result = [];
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const cols = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(col => col.replace(/^"|"$/g, '').trim());
+                result.push({ t: cols[0], p: cols[1], d: cols[2], i: cols[3], desc: cols[4], img: cols[5] });
+            }
+            return result;
+        }
+
+        async function loadHomeData() {
+            try {
+                const res = await fetch(BASE_SHEET_URL);
+                const text = await res.text();
+                classes = parseCSV(text);
+                renderFeatured();
+            } catch(e) { console.error(e); }
+        }
+
+        function renderFeatured() {
+            const container = document.getElementById('featured-classes');
+            if(!container) return;
+            container.innerHTML = classes.slice(0, 3).map(c => `
+                <div class="card">
+                    <div class="card-img-container"><img src="${c.img}" alt="${c.t}"></div>
+                    <div class="card-body">
+                        <h3>${c.t}</h3>
+                        <p style="color: var(--orange); font-weight: 700; margin-top: 5px;">${c.i}</p>
+                        <p style="color: var(--slate); font-size: 0.85rem; margin-top: 5px;">Scheduled for ${c.d}.</p>
+                        <button class="enroll-btn" onclick="openPopup('${c.t}', 'LKR ${c.p}', '${c.d}', '${c.i}', '${c.desc}')">View Course Details</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPopup(title, price, time, teacher, desc) {
+            document.getElementById('popTitle').innerText = title;
+            document.getElementById('popPrice').innerText = price;
+            document.getElementById('popTime').innerText = time;
+            document.getElementById('popTeacher').innerText = teacher;
+            document.getElementById('popDesc').innerText = desc || "Full syllabus coverage.";
+            document.getElementById('courseModal').style.display = 'flex';
+        }
+        function closePopup(id) { document.getElementById(id).style.display = 'none'; }
+        function contactViaWhatsApp() {
+            const title = document.getElementById('popTitle').innerText;
+            window.open(`https://wa.me/94773298884?text=Hi, I'm interested in ${title}`, '_blank');
+        }
+        function openNoticePopup() { document.getElementById('noticeModal').style.display = 'flex'; }
+        function toggleTheme() { document.body.classList.toggle('dark-mode'); }
+        function toggleDropdown(e) { e.stopPropagation(); document.getElementById('gradeDropdown').classList.toggle('open'); }
+        
+        const dropdown = document.getElementById('grade-dropdown');
+        for (let i = 6; i <= 11; i++) dropdown.innerHTML += `<a href="classes.html?grade=Grade ${i < 10 ? '0'+i : i}">Grade ${i}</a>`;
+
+        document.addEventListener('DOMContentLoaded', loadHomeData);
+    </script>
+</body>
+</html>
